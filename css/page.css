@@ -1,0 +1,28 @@
+.bg-utez {
+    background: linear-gradient(110deg, #002E60 50%, #009574 50%);
+}
+
+
+.gray-card {
+    background-color: #004d40;
+}
+
+.gray-light-card {
+    background-color: #39796b;
+}
+
+.p-container {
+    padding-top: 10%;
+}
+
+.pb-container {
+    padding-bottom: 14.3%;
+}
+
+.pb2-container {
+    padding-bottom: 23.3%;
+}
+
+.pb3-container {
+    padding-bottom: 18.8%;
+}
