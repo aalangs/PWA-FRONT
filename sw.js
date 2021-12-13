@@ -23,7 +23,7 @@ function cleanCache(cacheName, sizeItems) {
 self.addEventListener('install', (event) => {
     const promeStatic = caches.open(CACHE_STATIC_NAME)
         .then(cache => {
-            /*return cache.addAll([
+            return cache.addAll([
                 '/PWA-FRONT/',
                 '/PWA-FRONT/index.html',
                 '/PWA-FRONT/manifest.json',
@@ -35,13 +35,14 @@ self.addEventListener('install', (event) => {
                 '/PWA-FRONT/views/newNote.html',
                 '/PWA-FRONT/views/ranking.html',
                 '/PWA-FRONT/views/categorie.html',
+                '/PWA-FRONT/images/noimage.png',
                 '/PWA-FRONT/images/icons/android-launchericon-72-72.png',
                 '/PWA-FRONT/images/icons/android-launchericon-96-96.png',
                 '/PWA-FRONT/images/icons/android-launchericon-144-144.png',
                 '/PWA-FRONT/images/icons/android-launchericon-192-192.png',
                 '/PWA-FRONT/images/icons/android-launchericon-512-512.png',
-            ]);*/
-            return cache.addAll([
+            ]);
+            /*return cache.addAll([
                 './',
                 './index.html',
                 './manifest.json',
@@ -59,7 +60,7 @@ self.addEventListener('install', (event) => {
                 './images/icons/android-launchericon-144-144.png',
                 './images/icons/android-launchericon-192-192.png',
                 './images/icons/android-launchericon-512-512.png',
-            ]);
+            ]);*/
         });
     const promeInmutable = caches.open(CACHE_INMUTABLE_NAME)
         .then(cache => {

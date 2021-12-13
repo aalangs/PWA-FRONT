@@ -50,8 +50,8 @@ btnCancelPhoto.hide()
 const camera = new Camera(imgNote[0]);
 const cameraEdit = new Camera(imgNoteEdit[0]);
 
-let blobImage = '../images/noimage.png';
-let blobImageEdit = '../images/noimage.png';
+let blobImage = '/PWA-FRONT/images/noimage.png';
+let blobImageEdit = '/PWA-FRONT/images/noimage.png';
 let allCategories = [];
 let noteSelected = {};
 
@@ -66,7 +66,7 @@ function loadNotes() {
             }
 
             if (note.image === '') {
-                note.image = '../images/noimage.png'
+                note.image = '/PWA-FRONT/images/noimage.png'
             }
             let noteItem = createNote(note)
             $('#list-notes').append(noteItem);
@@ -289,7 +289,7 @@ btnSaveNote.on("click", function () {
     let newNote;
     let today = new Date();
     let dateToday = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    if (blobImageEdit != '') {
+    if (blobImageEdit != '/PWA-FRONT/images/noimage.png') {
         noteSelected.image = blobImageEdit
     }
     if (parseInt(categorie.val(), 10) != 0) {   
@@ -331,7 +331,7 @@ btnSaveNote.on("click", function () {
                     noteTxt.val('')
                     dateEnd.val('')
                     categorie.val('0')
-                    blobImage = '../images/noimage.png'
+                    blobImage = '/PWA-FRONT/images/noimage.png'
                     data.result.idNota = 1
                     let noteItem = createNote(data.result)
                     $('#list-notes').append(noteItem);
@@ -362,7 +362,7 @@ btnEditNote.on("click", function () {
     const date = new Date(dateEndEdit.val());
     date.setDate(date.getDate() + 1);
     noteSelected.nota = noteEdit.val()
-    if (blobImageEdit != '../images/noimage.png') {
+    if (blobImageEdit != '/PWA-FRONT/images/noimage.png') {
         noteSelected.image = blobImageEdit
     }
     noteSelected.fechaVencimiento = date;
@@ -385,7 +385,7 @@ btnEditNote.on("click", function () {
                 }).then(() => {
                     noteEdit.val('')
                     dateEndEdit.val('')
-                    blobImageEdit = '../images/noimage.png'
+                    blobImageEdit = '/PWA-FRONT/images/noimage.png'
                     btnCancelEditPhoto.click()
                     cancel()
                     $('#list-notes').empty()
