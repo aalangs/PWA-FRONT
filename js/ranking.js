@@ -166,7 +166,6 @@ btnEditClasifiacion.on("click", function () {
             }),
         }).then((res) => {
             res.json().then((data) => {
-                console.log(data);
                 if (data.response) {
                     Swal.fire({
                         title: 'Clasficación modificada',

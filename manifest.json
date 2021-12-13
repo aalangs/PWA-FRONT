@@ -1,6 +1,11 @@
 {
     "short_name": "Keep UTEZ",
     "name": "Keep UTEZ 2021",
+    "background_color": "#EEE",
+    "theme_color": "#1565c0",
+    "start_url": "index.html",
+    "display": "standalone",
+    "orientation": "any",
     "icons": [
       {
           "src": "images/icons/android-launchericon-48-48.png",
@@ -32,10 +37,5 @@
           "sizes": "512x512",
           "type": "image/png"
       }
-    ],
-    "background_color": "#EEE",
-    "theme_color": "#1565c0",
-    "start_url": "index.html",
-    "display": "standalone",
-    "orientation": "any"
+    ]
   }

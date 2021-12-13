@@ -167,7 +167,6 @@ btnSaveCategorie.on("click", function () {
             body: JSON.stringify(newObject),
         }).then((res) => {
             res.json().then((data) => {
-                console.log(data);
                 if (data.response) {
                     Swal.fire({
                         title: 'Categoría registrada',
@@ -175,6 +174,7 @@ btnSaveCategorie.on("click", function () {
                         confirmButtonText: 'Aceptar'
                     }).then(() => {
                         categorieName.val('')
+                        rankingSelected.val('0')
                         $('#li-categories').empty()
                         loadCategories()
                         btnCancel.click()
@@ -211,7 +211,6 @@ btnEditCategorie.on("click", function () {
             body: JSON.stringify(categorieSelected)
         }).then((res) => {
             res.json().then((data) => {
-                console.log(data);
                 if (data.response) {
                     Swal.fire({
                         title: 'Categoría modificada',
@@ -219,6 +218,7 @@ btnEditCategorie.on("click", function () {
                         confirmButtonText: 'Aceptar'
                     }).then(() => {
                         categorieEditName.val('')
+                        rankingEditSelected.val('0')
                         $('#li-categories').empty()
                         loadCategories()
                     })
